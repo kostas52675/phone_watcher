@@ -1,0 +1,10 @@
+.venv/
+__pycache__/
+*.pyc
+icon.ico
+phonewatcher.lock
+phonewatcher.stop
+phonewatcher.log
+punishment.videos/*
+!punishment.videos/.gitkeep
+calibration.json
