@@ -1,10 +1,30 @@
+# Python
 .venv/
+venv/
 __pycache__/
-*.pyc
-icon.ico
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+build/
+dist/
+
+# Runtime files
+phonewatcher.log
 phonewatcher.lock
 phonewatcher.stop
-phonewatcher.log
+calibration.json
+icon.ico
+
+# Personal punishment videos (keep only the empty folder)
 punishment.videos/*
 !punishment.videos/.gitkeep
-calibration.json
+
+# Editors / OS
+.vscode/
+.idea/
+Thumbs.db
+.DS_Store
+
+# Downloaded models (fetched by download_model.py / ultralytics on first run)
+yolov8n.pt
+models/*.task

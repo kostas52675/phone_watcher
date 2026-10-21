@@ -212,3 +212,28 @@ VLC install, or real OS processes are required.
 All processing is performed in memory on the local machine. No video, images, or
 keystrokes are written to disk by this program — `calibration.json` stores only
 aggregate pitch/eye-gaze numbers.
+
+## How this was built
+
+Built with the help of Claude Code. I have studied it, I understand it, and I maintain it.
+
+## Credits / Third-party
+
+This project uses the following third-party models. Each remains under its own license:
+
+| Model / file | Author | License |
+|---|---|---|
+| YOLOv8n (`yolov8n.pt`) via the `ultralytics` package | [Ultralytics](https://github.com/ultralytics/ultralytics) | [AGPL-3.0](https://github.com/ultralytics/ultralytics/blob/main/LICENSE) |
+| MediaPipe Face Landmarker (`models/face_landmarker.task`) | [Google MediaPipe](https://github.com/google-ai-edge/mediapipe) | [Apache-2.0](https://github.com/google-ai-edge/mediapipe/blob/master/LICENSE) |
+
+The model files are not included in this repository. `models/face_landmarker.task` is
+downloaded by `python download_model.py`, and `yolov8n.pt` is downloaded automatically by
+the `ultralytics` package the first time Phone Watcher runs (internet connection needed
+once for both).
+
+Other Python dependencies are listed in `requirements.txt` and are used under their own licenses.
+
+## License
+
+This project is licensed under the GNU Affero General Public License v3.0 (AGPL-3.0),
+because it depends on Ultralytics YOLOv8, which is AGPL-3.0. See [LICENSE](LICENSE).
